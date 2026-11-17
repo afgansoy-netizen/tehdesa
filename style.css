@@ -234,6 +234,58 @@ main.wadah {
     background: var(--putih);
 }
 
+.password-isian {
+    position: relative;
+}
+
+.password-isian input {
+    padding-right: 48px;
+}
+
+.tombol-lihat-password {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    padding: 7px;
+    place-items: center;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--hijau);
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.tombol-lihat-password:hover {
+    background: var(--krem);
+}
+
+.tombol-lihat-password:focus-visible {
+    outline: 2px solid var(--hijau-tua);
+    outline-offset: 1px;
+}
+
+.ikon-mata {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.ikon-mata-coret {
+    display: none;
+}
+
+.tombol-lihat-password[aria-pressed="true"] .ikon-mata-coret {
+    display: block;
+}
+
 .kolom-isian input:focus,
 .kolom-isian select:focus,
 .kolom-isian textarea:focus {

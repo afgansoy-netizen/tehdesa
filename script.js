@@ -68,6 +68,26 @@ ambil("halaman-katalog").addEventListener("change", tampilkanKatalog);
 const USERNAME = "user";
 const PASSWORD = "1111";
 
+// Fitur tampilkan atau sembunyikan password
+ambil("tombol-lihat-password").addEventListener("click", function () {
+  const password = ambil("isian-password");
+  const tampil = password.type === "password";
+  password.type = tampil ? "text" : "password";
+  this.setAttribute("aria-pressed", String(tampil));
+  this.setAttribute(
+    "aria-label",
+    tampil ? "Sembunyikan password" : "Tampilkan password",
+  );
+});
+
+ambil("form-login").addEventListener("reset", function () {
+  const password = ambil("isian-password");
+  password.type = "password";
+  const tombol = ambil("tombol-lihat-password");
+  tombol.setAttribute("aria-pressed", "false");
+  tombol.setAttribute("aria-label", "Tampilkan password");
+});
+
 // Fitur masuk (login), setelah berhasil kembali ke katalog
 ambil("form-login").addEventListener("submit", function (e) {
   e.preventDefault();
