@@ -259,8 +259,8 @@ main.wadah {
     transform: translateY(-50%);
 }
 
-.tombol-lihat-password:hover {
-    background: var(--krem);
+.tombol-lihat-password:hover .ikon-mata {
+    color: var(--aksen);
 }
 
 .tombol-lihat-password:focus-visible {
